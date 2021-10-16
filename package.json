@@ -1,0 +1,18 @@
+{
+  "name": "webfinances-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss public/tailwind.css -o public/build/tailwind.css",
+    "dev": "npx tsc --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.3.7",
+    "postcss-cli": "^9.0.1",
+    "tailwindcss": "^2.2.17",
+    "typescript": "^4.4.4"
+  }
+}

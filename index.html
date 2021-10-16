@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebFinances 2.0</title>
+  <link rel="stylesheet" href="/public/build/tailwind.css">
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body >
+  <main class="bg-gray-50 min-h-screen">
+    <section class="header bg-blue-600 text-white">
+      <header class="px-6 py-2">
+        <h1 class="text-xl font-semibold">TypeFinances</h1>
+      </header>
+      <div class="header-content flex justify-between items-center max-w-xl mx-auto p-4">
+        <span>
+          <h2 class="text-gray-200 font-semibold px-2 pb-1">Balance</h2>
+          <p id="balance" class="text-4xl font-bold tracking-wide">R$ 0,00</p>
+        </span>
+        <button id="modal-button" class="add bg-blue-800 flex items-center justify-center w-14 h-14 rounded text-3xl cursor-pointer hover:bg-blue-900 transition">
+          +
+        </button>
+      </div>
+    </section>
+    <section class="content max-w-xl mx-auto">
+      <ul id="transaction-list" class="m-4">
+        <!-- Dynamic content here -->
+        <!-- <li class="flex justify-between p-4 bg-white mb-4 rounded shadow relative">
+          <div class="item-left">
+            <h3 class="text-xl font-semibold text-blue-900">Dropbox plan</h3>
+            <p class="text-gray-700">Subscription</p>
+          </div>
+          <div class="flex items-center">
+            <div class="item-right text-right">
+              <h4 class="font-semibold">-R$ 1440,00</h4>
+              <p class="font-light text-gray-700">18 Sep 2019</p>
+            </div>
+            <div class="bg-red-600 text-white font-semibold p-4 ml-4 rounded cursor-pointer hover:bg-red-400 transition">
+              <span>Delete</span>
+            </div>
+          </div>
+        </li> -->
+
+      </ul>
+    </section>
+  </main>
+  <section id="modal" class="absolute left-1/2 transform  -translate-x-1/2 -translate-y-1/2  p-8 bg-white rounded-xl shadow-2xl">
+    <div class="flex justify-between items-center">
+      <span class="text-2xl">Add transaction</span>
+      <button id="modal-button" class="font-semibold bg-blue-900 text-white h-8 w-8 flex justify-center items-center rounded-full cursor-pointer hover:bg-blue-700 transition">X</button>
+    </div>
+    <form class="mt-8">
+      <label class="block mb-4 text-gray-500">
+        <span class="block mb-2">Nome:</span>
+        <input class="w-full border border-blue-400 py-2 px-4 rounded" type="text" name="nome" id="nome">
+      </label>
+      <label class="block mb-4 text-gray-500">
+        <span class="block mb-2">Descrição:</span>
+        <input class="w-full border border-blue-400 py-2 px-4 rounded" type="text" name="desc" id="desc">
+      </label>
+      <label class="block mb-4 text-gray-500">
+        <span class="block mb-2">Valor:</span>
+        <input class="w-full border border-blue-400 py-2 px-4 rounded" type="number" name="valor" id="valor">
+      </label>
+      <div class="h-20 flex align-bottom">
+        <input class="mt-auto w-full py-4 bg-blue-700 border-none text-white rounded hover:bg-blue-600 transation cursor-pointer" type="submit" id="submit" name="submit">
+      </div>
+    </form>
+  </section>
+  <script type="module" src="public/scripts/scripts.js"></script>
+</body>
+</html>
